@@ -1,8 +1,19 @@
 import { useState } from "react";
+import { NavBarObject } from "./types";
 import About from "./components/About";
+import NavBar from "./components/NavBar";
 
 function App() {
-  const [alertVisible, setAlertVisibility] = useState(false);
+  // navBarPages should be an object with objects in it which have the displayName
+  // const navBarPages = ["About", "Gallery", "Portfolio"];
+
+  let navBarArr: NavBarObject[] = [
+    { displayName: "About" },
+    { displayName: "Gallery" },
+    { displayName: "Portfolio" },
+  ];
+
+  // const [alertVisible, setAlertVisibility] = useState(false);
   // for ListGroup
   // let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
 
@@ -11,7 +22,8 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="container">
+      <NavBar pages={navBarArr} />
       <About></About>
     </div>
     // <div>
