@@ -7,7 +7,11 @@ function App() {
   // navBarPages should be an object with objects in it which have the displayName
   // const navBarPages = ["About", "Gallery", "Portfolio"];
 
-  let navBarArr: NavBarObject[] = [
+  const navBarBranding: NavBarObject = {
+    displayName: "sarahmarchioni.com",
+    link: "http://localhost:5173",
+  };
+  const navBarArr: NavBarObject[] = [
     { displayName: "About" },
     { displayName: "Gallery" },
     { displayName: "Portfolio" },
@@ -23,7 +27,7 @@ function App() {
 
   return (
     <div className="container">
-      <NavBar pages={navBarArr} />
+      <NavBar pages={navBarArr} branding={navBarBranding} />
       <About></About>
     </div>
     // <div>
