@@ -17,3 +17,10 @@ export type AboutObject = {
   height: number;
   width: number;
 };
+
+export type PaintingObject = {
+  title: string;
+  file_src: string;
+  alt: string;
+  dimensions?: { height: number; width: number };
+};
