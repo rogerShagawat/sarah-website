@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { NavBarObject } from "./types";
+import { NavBarObject, PortfolioObject } from "./types";
 import About from "./components/About";
 import NavBar from "./components/NavBar";
+import Portfolio from "./components/Portfolio";
 
 function App() {
   // navBarPages should be an object with objects in it which have the displayName
@@ -16,6 +17,13 @@ function App() {
     { displayName: "Gallery" },
     { displayName: "Portfolio" },
   ];
+  const portfolioObj: PortfolioObject = {
+    file_location: "",
+    onlline_location:
+      "https://drive.google.com/file/d/1EUk21Y2Pa9Gt6YAePe9_VCGLRyBHh5Fv/preview",
+    height: "800",
+    width: "100%",
+  };
 
   // const [alertVisible, setAlertVisibility] = useState(false);
   // for ListGroup
@@ -28,7 +36,13 @@ function App() {
   return (
     <div className="container">
       <NavBar pages={navBarArr} branding={navBarBranding} />
-      <About></About>
+      <Portfolio
+        file_location={portfolioObj.file_location}
+        online_location={portfolioObj.onlline_location}
+        height={portfolioObj.height}
+        width={portfolioObj.width}
+      />
+      {/* <About></About> */}
     </div>
     // <div>
 
