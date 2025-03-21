@@ -9,8 +9,11 @@ const Gallery = ({ paintings }: GalleryProps) => {
   return (
     <div>
       <h1>Gallery</h1>
-      {paintings.map((painting, index) => (
-        <img src={painting.file_src} className="img-fluid" alt={painting.alt} />
+      {paintings.map(({ file_src, alt }, index) => (
+        // TODO handle on click to bring to the painting page
+        <div style={{ marginTop: "15px" }} key={index}>
+          <img src={file_src} className="img-fluid rounded" alt={alt} />
+        </div>
       ))}
     </div>
   );
