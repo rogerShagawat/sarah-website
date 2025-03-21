@@ -17,7 +17,18 @@ const Portfolio = ({
   return (
     <div>
       <h1>Portfolio</h1>
-      {/* <embed src={obj.file_location} /> */}
+      {/* <object
+        data={file_location}
+        type="application/pdf"
+        height={height}
+        width={width}
+      >
+        <p>
+          You must be using a browser that can't display pdfs...{" "}
+          <a href={file_location}>Click here to download my portfolio!</a>
+        </p>
+      </object> */}
+      {/* <embed src={file_location} height={height} width={width} /> */}
       <iframe src={online_location} height={height} width={width} />
     </div>
   );

@@ -10,13 +10,13 @@ const NavBar = ({ branding, pages }: NavBarProps) => {
     <nav className="navbar-expand-sm bg-body-tertiary ">
       <div className="container-fluid">
         <div className="navbar" id="navbarSupportedContent">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             {branding.displayName}
           </a>
           <ul className="navbar-nav me-auto mb-1 mb-lg-0">
             {pages.map(({ displayName, link }, index) => (
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+              <li className="nav-item" key={displayName}>
+                <a className="nav-link active" aria-current="page" href={link}>
                   {displayName}
                 </a>
               </li>
