@@ -22,5 +22,10 @@ export type PaintingObject = {
   title: string;
   file_src: string;
   alt: string;
+  medium?: string;
+  real_dimensions?: string;
+  year_created?: string;
+  description?: string;
+  shop_location?: string;
   dimensions?: { height: number; width: number };
 };

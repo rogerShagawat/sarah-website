@@ -15,7 +15,7 @@ const NavBar = ({ branding, pages }: NavBarProps) => {
           </a>
           <ul className="navbar-nav me-auto mb-1 mb-lg-0">
             {pages.map(({ displayName, link }, index) => (
-              <li className="nav-item" key={displayName}>
+              <li className="nav-item" key={index}>
                 <a className="nav-link active" aria-current="page" href={link}>
                   {displayName}
                 </a>
