@@ -22,9 +22,8 @@ const About = () => {
       </p>
 
       <p>
-        Anyways, I poopy a lot I peepee a bit more often. I'm not into soylent,
-        I love Ban Mi. I'm a silver girlie, I like thet smell and look of
-        lavender.
+        Anyways, I'm not into soylent, I love Ban Mi. I'm a silver girlie, I
+        like thet smell and look of lavender.
       </p>
 
       <p>
