@@ -9,9 +9,6 @@ import Painting from "./components/Painting";
 import { paintingArr } from "./GalleryItems";
 
 function App() {
-  // navBarPages should be an object with objects in it which have the displayName
-  // const navBarPages = ["About", "Gallery", "Portfolio"];
-
   const navBarBranding: NavBarObject = {
     displayName: "sarahmarchioni.work",
     link: "/",
@@ -22,10 +19,6 @@ function App() {
     { displayName: "Gallery", link: "/Gallery" },
     { displayName: "Portfolio", link: "/Portfolio" },
   ];
-
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
 
   return (
     <div className="container" style={{ height: "100%" }}>

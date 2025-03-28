@@ -10,14 +10,6 @@ export type PortfolioObject = {
   width: string;
 };
 
-export type AboutObject = {
-  headshot_src: string;
-  headshot_alt: string;
-  className: string;
-  height: number;
-  width: number;
-};
-
 export type PaintingObject = {
   title: string;
   file_src: string;
@@ -28,4 +20,17 @@ export type PaintingObject = {
   description?: string;
   shop_location?: string;
   dimensions?: { height: number; width: number };
+};
+
+export type ImageObject = {
+  file_src: string;
+  alt: string;
+  caption: string;
+  height?: number;
+  width?: number;
+};
+
+export type AboutObject = {
+  title: string;
+  images: ImageObject[];
 };

@@ -1,6 +1,5 @@
-import NavBar from "../components/NavBar";
 import Portfolio from "../components/Portfolio";
-import { NavBarObject, PortfolioObject } from "../types";
+import { PortfolioObject } from "../types";
 
 export default function PortfolioPage() {
   const portfolioObj: PortfolioObject = {

@@ -13,7 +13,12 @@ const Gallery = ({ paintings }: GalleryProps) => {
         // TODO handle on click to bring to the painting page
         <div style={{ marginTop: "15px" }} key={index}>
           <a href={"/" + title}>
-            <img src={file_src} className="img-fluid rounded" alt={alt} />
+            <img
+              src={file_src}
+              className="img-fluid rounded"
+              alt={alt}
+              width="720px"
+            />
           </a>
         </div>
       ))}
