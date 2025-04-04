@@ -4,6 +4,22 @@ interface Props {
   aboutObject: AboutObject;
 }
 
+function CreateImageTag(images: ImageObject[], index: number) {
+  const { file_src, alt, caption, width = 500 } = images[index];
+  return (
+    <figure
+      key={index}
+      className="figure text-center"
+      style={{ margin: "15px" }}
+    >
+      <img src={file_src} className="img-fluid" alt={alt} width={width}></img>
+      <figcaption className="figure-caption italic">
+        <i>{caption}</i>
+      </figcaption>
+    </figure>
+  );
+}
+
 function About({ aboutObject }: Props) {
   const { title, images, email } = aboutObject;
   return (
@@ -31,13 +47,7 @@ function About({ aboutObject }: Props) {
             professional experience in art galleries and architectural firms has
             bolstered my perspective of the dance between art and architecture.
           </p>
-          <p>
-            My journey with my art has been an ever-changing experience. I’ve
-            been practicing art since I was a child, and through high school and
-            college I realized my passion for it. For me, art is more than a
-            hobby- it’s a way for me to exist. My art is a product of my energy
-            and experiences.
-          </p>
+          {CreateImageTag(images, 1)}
           <p>
             In my paintings, I am specifically drawn to themes of the feminine
             experience. Throughout history, women’s words have been suppressed,
@@ -48,23 +58,24 @@ function About({ aboutObject }: Props) {
             Painting is the most accurate way for me to portray who I am without
             words.
           </p>
+
+          <p>
+            Check out my architecture <a href="/Portfolio">portfolio</a> +
+            <a href="/Gallery">artwork</a>!
+          </p>
         </div>
         <div className="col">
-          {images.map(({ file_src, alt, caption, width = 500 }, index) => (
-            <figure
-              key={index}
-              className="figure text-center"
-              style={{ margin: "15px" }}
-            >
-              <img
-                src={file_src}
-                className="img-fluid"
-                alt={alt}
-                width={width}
-              ></img>
-              <figcaption className="figure-caption">{caption}</figcaption>
-            </figure>
-          ))}
+          {CreateImageTag(images, 0)}
+
+          <p>
+            My journey with my art has been an ever-changing experience. I’ve
+            been practicing art since I was a child, and through high school and
+            college I realized my passion for it. For me, art is more than a
+            hobby- it’s a way for me to exist. My art is a product of my energy
+            and experiences.
+          </p>
+
+          {CreateImageTag(images, 2)}
         </div>
       </div>
     </div>
