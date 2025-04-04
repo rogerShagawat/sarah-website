@@ -1,5 +1,11 @@
 export type NavBarObject = {
+  branding: NavItem;
+  pages: NavItem[];
+};
+
+export type NavItem = {
   displayName: string;
+  icon_src?: string;
   link?: string;
 };
 
@@ -33,4 +39,20 @@ export type ImageObject = {
 export type AboutObject = {
   title: string;
   images: ImageObject[];
+  email: string;
+};
+
+export type FooterObject = {
+  icon_width: number;
+  icon_height: number;
+  icon_data: IconDataObject[];
+  email: string;
+  copyright?: string;
+};
+
+export type IconDataObject = {
+  name: string;
+  className: string;
+  href: string;
+  path_d: string;
 };

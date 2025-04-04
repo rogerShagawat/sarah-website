@@ -1,14 +1,18 @@
-import { ImageObject } from "../types";
+import { AboutObject, ImageObject } from "../types";
 
 interface Props {
-  title: string;
-  images: ImageObject[];
+  aboutObject: AboutObject;
 }
 
-function About({ title, images }: Props) {
+function About({ aboutObject }: Props) {
+  const { title, images, email } = aboutObject;
   return (
     <div className="container">
       <h1>{title}</h1>
+      <address>
+        {"Email: "}
+        <a href={"mailto:" + email}>{email}</a>
+      </address>
       <div className="row align-items-start">
         <div className="col">
           <p>
@@ -41,7 +45,11 @@ function About({ title, images }: Props) {
         </div>
         <div className="col">
           {images.map(({ file_src, alt, caption, width = 500 }, index) => (
-            <figure className="figure text-center" style={{ margin: "15px" }}>
+            <figure
+              key={index}
+              className="figure text-center"
+              style={{ margin: "15px" }}
+            >
               <img
                 src={file_src}
                 className="img-fluid"

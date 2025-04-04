@@ -15,7 +15,7 @@ const Portfolio = ({
   width = "100%",
 }: PortfolioProps) => {
   return (
-    <div>
+    <div className="container">
       <h1>Portfolio</h1>
       {/* <object
         data={file_location}

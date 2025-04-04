@@ -1,7 +1,11 @@
 import About from "../components/About";
 import { AboutObject } from "../types";
 
-export default function AboutPage() {
+interface Props {
+  email: string;
+}
+
+export default function AboutPage({ email }: Props) {
   const aboutObject: AboutObject = {
     title: "Sarah Marchioni",
     images: [
@@ -21,6 +25,7 @@ export default function AboutPage() {
         caption: "Here I am presenting my final critique!",
       },
     ],
+    email: email,
   };
-  return <About title={aboutObject.title} images={aboutObject.images} />;
+  return <About aboutObject={aboutObject} />;
 }
