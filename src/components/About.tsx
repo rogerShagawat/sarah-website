@@ -12,7 +12,12 @@ function CreateImageTag(images: ImageObject[], index: number) {
       className="figure text-center"
       style={{ margin: "15px" }}
     >
-      <img src={file_src} className="img-fluid" alt={alt} width={width}></img>
+      <img
+        src={file_src}
+        className="img-fluid text-center"
+        alt={alt}
+        width={width}
+      ></img>
       <figcaption className="figure-caption italic">
         <i>{caption}</i>
       </figcaption>

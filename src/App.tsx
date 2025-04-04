@@ -60,7 +60,7 @@ function App() {
   };
 
   return (
-    <div className="container" style={{ height: "100%" }}>
+    <div className="container fs-4" style={{ height: "100%" }}>
       <NavBar branding={navBarObj.branding} pages={navBarObj.pages} />
       <BrowserRouter>
         <Routes>
