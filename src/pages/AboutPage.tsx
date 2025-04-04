@@ -12,17 +12,17 @@ export default function AboutPage({ email }: Props) {
       {
         file_src: "images/of_sarah/sarah_mirror.jpeg",
         alt: "A selfie of Sarah in the mirror.",
-        caption: "Das me!",
+        caption: "Me!",
       },
       {
         file_src: "images/of_sarah/sarah_drill.jpeg",
         alt: "A picture of Sarah drilling.",
-        caption: "Here I am working on a project.",
+        caption: "Me building my chair design in my furniture studio course.",
       },
       {
         file_src: "images/of_sarah/sarah_final_crit.jpeg",
         alt: "A picture of Sarah presenting her final critique.",
-        caption: "Here I am presenting my final critique!",
+        caption: "Me at my final architecture critique at Marywood University!",
       },
     ],
     email: email,

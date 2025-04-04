@@ -15,32 +15,38 @@ function About({ aboutObject }: Props) {
       </address>
       <div className="row align-items-start">
         <div className="col">
+          <p>Welcome to my website!</p>
           <p>
-            I'm Sarah I'm like really cool, and my awesome boyfriend made this
-            website for me and like he's super cool too!
+            My name is Sarah Marchioni, I am an interior architectural designer
+            and artist. This is my collection of portfolios- both architectural
+            & artistic.
           </p>
           <p>
-            You should like checkout my <a href="/Gallery">Gallery</a> and like
-            also maybe my <a href="/Portfolio">Portfolio</a>? Idk. Just an idea.
+            I am driven by the intersection of architectural design and the
+            human experience. What is a space without its inhabitant? How does
+            the human experience shape the spaces we occupy, not just
+            individually but as a whole? With my bachelor of interior
+            architecture as well as my ongoing experience within the field, I
+            aim to explore these concepts through my architectural works. My
+            professional experience in art galleries and architectural firms has
+            bolstered my perspective of the dance between art and architecture.
           </p>
           <p>
-            Anyways, I'm not into soylent, I love Ban Mi. I'm a silver girlie, I
-            like thet smell and look of lavender.
+            My journey with my art has been an ever-changing experience. I’ve
+            been practicing art since I was a child, and through high school and
+            college I realized my passion for it. For me, art is more than a
+            hobby- it’s a way for me to exist. My art is a product of my energy
+            and experiences.
           </p>
           <p>
-            Right now I'm the solo design team at{" "}
-            <a target="_blank" href="https://homebyalexander.com/">
-              Home By Alexander.
-            </a>
-          </p>
-          <p>
-            Also you should check out my{" "}
-            <a
-              target="_blank"
-              href="https://www.instagram.com/sarahinteriorarchitecture/"
-            >
-              art page on Instagram
-            </a>
+            In my paintings, I am specifically drawn to themes of the feminine
+            experience. Throughout history, women’s words have been suppressed,
+            forcing us to find other ways to prove our existence. One of the
+            most powerful tools for that is art. I often struggle to find the
+            words to articulate my experience as a woman today. However, I’ve
+            found that the limitations of language can be exceeded through art.
+            Painting is the most accurate way for me to portray who I am without
+            words.
           </p>
         </div>
         <div className="col">
