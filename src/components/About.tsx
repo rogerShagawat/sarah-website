@@ -84,8 +84,8 @@ function About({ aboutObject }: Props) {
           </p>
 
           <p>
-            Check out my architecture <a href="/Portfolio">portfolio</a> +
-            <a href="/Gallery">artwork</a>!
+            Check out my architecture <a href="Portfolio">portfolio</a> +
+            <a href="Gallery">artwork</a>!
           </p>
         </div>
 

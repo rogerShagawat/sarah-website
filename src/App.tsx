@@ -24,9 +24,9 @@ function App() {
       link: "/",
     },
     pages: [
-      { displayName: "About", link: "/About" },
-      { displayName: "Gallery", link: "/Gallery" },
-      { displayName: "Portfolio", link: "/Portfolio" },
+      { displayName: "About", link: "About" },
+      { displayName: "Gallery", link: "Gallery" },
+      { displayName: "Portfolio", link: "Portfolio" },
     ],
   };
 
@@ -65,20 +65,20 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<AboutPage email={EMAIL} />} />
-          <Route path="/About" element={<AboutPage email={EMAIL} />} />
-          <Route path="/Portfolio" element={<PortfolioPage />} />
+          <Route path="About" element={<AboutPage email={EMAIL} />} />
+          <Route path="Portfolio" element={<PortfolioPage />} />
           <Route
-            path="/Gallery"
+            path="Gallery"
             element={<GalleryPage galleryArr={paintingArr} />}
           />
           <Route
-            path="/Painting"
+            path="Painting"
             element={<Painting painting={paintingArr[0]} />}
           />
           {paintingArr.map((painting, index) => (
             <Route
               key={painting.title}
-              path={"/" + painting.title}
+              path={painting.title}
               element={<Painting painting={painting} />}
             />
           ))}
