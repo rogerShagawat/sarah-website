@@ -18,7 +18,7 @@ function CreateImageTag(images: ImageObject[], index: number) {
         alt={alt}
         width={width}
       ></img>
-      <figcaption className="figure-caption italic">
+      <figcaption className="figure-caption italic fs-6">
         <i>{caption}</i>
       </figcaption>
     </figure>
@@ -35,7 +35,7 @@ function About({ aboutObject }: Props) {
         <a href={"mailto:" + email}>{email}</a>
       </address>
 
-      <div className="row justify-content-center">
+      <div className="row">
         <div className="col-lg-6 col-12">
           <p>Welcome to my website!</p>
           <p>
@@ -55,17 +55,19 @@ function About({ aboutObject }: Props) {
           </p>
         </div>
 
-        <div className="col-lg-6 col-12">{CreateImageTag(images, 0)}</div>
+        <div className="col-lg-6 col-12 text-center">
+          {CreateImageTag(images, 0)}
+        </div>
 
-        <div className="col-lg-6 col-12">{CreateImageTag(images, 1)}</div>
+        <div className="col-lg-6 col-12 ">{CreateImageTag(images, 1)}</div>
 
         <div className="col-lg-6 col-12">
           <p>
             In my paintings, I am specifically drawn to themes of the feminine
-            experience. Throughout history, women’s words have been suppressed,
+            experience. Throughout history, women's words have been suppressed,
             forcing us to find other ways to prove our existence. One of the
             most powerful tools for that is art. I often struggle to find the
-            words to articulate my experience as a woman today. However, I’ve
+            words to articulate my experience as a woman today. However, I've
             found that the limitations of language can be exceeded through art.
             Painting is the most accurate way for me to portray who I am without
             words.
@@ -74,10 +76,10 @@ function About({ aboutObject }: Props) {
 
         <div className="col-lg-6 col-12">
           <p>
-            My journey with my art has been an ever-changing experience. I’ve
+            My journey with my art has been an ever-changing experience. I've
             been practicing art since I was a child, and through high school and
             college I realized my passion for it. For me, art is more than a
-            hobby- it’s a way for me to exist. My art is a product of my energy
+            hobby- it's a way for me to exist. My art is a product of my energy
             and experiences.
           </p>
 
@@ -87,7 +89,9 @@ function About({ aboutObject }: Props) {
           </p>
         </div>
 
-        <div className="col-lg-6 col-12">{CreateImageTag(images, 2)}</div>
+        <div className="col-lg-6 col-12 text-center">
+          {CreateImageTag(images, 2)}
+        </div>
       </div>
     </div>
   );

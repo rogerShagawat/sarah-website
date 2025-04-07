@@ -8,7 +8,7 @@ interface NavBarProps {
 const NavBar = ({ branding, pages }: NavBarProps) => {
   return (
     // <div className="container">
-    <nav className="navbar-expand-sm bg-body-tertiary">
+    <nav className="navbar-expand-sm bg-body-tertiary fs-5">
       {/* <div className="container-fluid"> */}
       <div className="navbar" id="navbarSupportedContent">
         <a className="navbar-brand" href="/">
