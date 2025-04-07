@@ -5,7 +5,7 @@ interface Props {
 }
 
 function CreateImageTag(images: ImageObject[], index: number) {
-  const { file_src, alt, caption, width = 500 } = images[index];
+  const { file_src, alt, caption, width = 450 } = images[index];
   return (
     <figure
       key={index}
@@ -14,7 +14,7 @@ function CreateImageTag(images: ImageObject[], index: number) {
     >
       <img
         src={file_src}
-        className="img-fluid text-center"
+        className="img-fluid rounded"
         alt={alt}
         width={width}
       ></img>
@@ -34,8 +34,9 @@ function About({ aboutObject }: Props) {
         {"Email: "}
         <a href={"mailto:" + email}>{email}</a>
       </address>
-      <div className="row align-items-start">
-        <div className="col">
+
+      <div className="row justify-content-center">
+        <div className="col-lg-6 col-12">
           <p>Welcome to my website!</p>
           <p>
             My name is Sarah Marchioni, I am an interior architectural designer
@@ -52,7 +53,13 @@ function About({ aboutObject }: Props) {
             professional experience in art galleries and architectural firms has
             bolstered my perspective of the dance between art and architecture.
           </p>
-          {CreateImageTag(images, 1)}
+        </div>
+
+        <div className="col-lg-6 col-12">{CreateImageTag(images, 0)}</div>
+
+        <div className="col-lg-6 col-12">{CreateImageTag(images, 1)}</div>
+
+        <div className="col-lg-6 col-12">
           <p>
             In my paintings, I am specifically drawn to themes of the feminine
             experience. Throughout history, women’s words have been suppressed,
@@ -63,15 +70,9 @@ function About({ aboutObject }: Props) {
             Painting is the most accurate way for me to portray who I am without
             words.
           </p>
-
-          <p>
-            Check out my architecture <a href="/Portfolio">portfolio</a> +
-            <a href="/Gallery">artwork</a>!
-          </p>
         </div>
-        <div className="col">
-          {CreateImageTag(images, 0)}
 
+        <div className="col-lg-6 col-12">
           <p>
             My journey with my art has been an ever-changing experience. I’ve
             been practicing art since I was a child, and through high school and
@@ -80,8 +81,13 @@ function About({ aboutObject }: Props) {
             and experiences.
           </p>
 
-          {CreateImageTag(images, 2)}
+          <p>
+            Check out my architecture <a href="/Portfolio">portfolio</a> +
+            <a href="/Gallery">artwork</a>!
+          </p>
         </div>
+
+        <div className="col-lg-6 col-12">{CreateImageTag(images, 2)}</div>
       </div>
     </div>
   );

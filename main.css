@@ -1,7 +1,15 @@
 *{font-family: Georgia, serif;}
 
+.figure { display: table; }
+
 .navbar {
     background-color: antiquewhite !important;
     border: none !important;
     border-width:0!important;
+}
+.services-section img {
+  width: 90px;
+  height: 90px;
+  margin: auto;    
+  display: block;
 }
