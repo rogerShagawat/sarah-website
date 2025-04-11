@@ -1,13 +1,6 @@
-import { useState } from "react";
-import {
-  FooterObject,
-  NavBarObject,
-  NavItem,
-  PaintingObject,
-  PortfolioObject,
-} from "./types";
+import { FooterObject, NavBarObject } from "./types";
 import NavBar from "./components/NavBar";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import PortfolioPage from "./pages/PortfolioPage";
 import GalleryPage from "./pages/GalleryPage";
@@ -17,16 +10,23 @@ import Footer from "./components/Footer";
 
 function App() {
   const EMAIL = "svmarchioni@gmail.com";
+  const ROUTES = {
+    home: "/",
+    about: "/About",
+    gallery: "/Gallery",
+    portfolio: "/Portfolio",
+  };
 
   const navBarObj: NavBarObject = {
     branding: {
       displayName: "sarahmarchioni.work",
       link: "/",
     },
+
     pages: [
-      { displayName: "About", link: "About" },
-      { displayName: "Gallery", link: "Gallery" },
-      { displayName: "Portfolio", link: "Portfolio" },
+      { displayName: "About", link: ROUTES.about },
+      { displayName: "Gallery", link: ROUTES.gallery },
+      { displayName: "Portfolio", link: ROUTES.portfolio },
     ],
   };
 
@@ -62,20 +62,16 @@ function App() {
   return (
     <div className="container fs-4" style={{ height: "100%" }}>
       <NavBar branding={navBarObj.branding} pages={navBarObj.pages} />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
-          <Route path="/" element={<AboutPage email={EMAIL} />} />
-          <Route path="About" element={<AboutPage email={EMAIL} />} />
-          <Route path="Portfolio" element={<PortfolioPage />} />
+          <Route path={ROUTES.home} element={<AboutPage email={EMAIL} />} />
+          <Route path={ROUTES.about} element={<AboutPage email={EMAIL} />} />
+          <Route path={ROUTES.portfolio} element={<PortfolioPage />} />
           <Route
-            path="Gallery"
+            path={ROUTES.gallery}
             element={<GalleryPage galleryArr={paintingArr} />}
           />
-          <Route
-            path="Painting"
-            element={<Painting painting={paintingArr[0]} />}
-          />
-          {paintingArr.map((painting, index) => (
+          {paintingArr.map((painting) => (
             <Route
               key={painting.title}
               path={painting.title}
@@ -83,7 +79,7 @@ function App() {
             />
           ))}
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Footer footerObj={footerObj} />
     </div>
   );
