@@ -7,6 +7,7 @@ import GalleryPage from "./pages/GalleryPage";
 import Painting from "./components/Painting";
 import { paintingArr } from "./GalleryItems";
 import Footer from "./components/Footer";
+import NotFound from "./components/NotFound";
 
 function App() {
   const EMAIL = "svmarchioni@gmail.com";
@@ -61,8 +62,8 @@ function App() {
 
   return (
     <div className="container fs-4" style={{ height: "100%" }}>
-      <NavBar branding={navBarObj.branding} pages={navBarObj.pages} />
       <HashRouter>
+        <NavBar branding={navBarObj.branding} pages={navBarObj.pages} />
         <Routes>
           <Route path={ROUTES.home} element={<AboutPage email={EMAIL} />} />
           <Route path={ROUTES.about} element={<AboutPage email={EMAIL} />} />
@@ -78,6 +79,7 @@ function App() {
               element={<Painting painting={painting} />}
             />
           ))}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </HashRouter>
       <Footer footerObj={footerObj} />
