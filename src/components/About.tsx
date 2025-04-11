@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { AboutObject, ImageObject } from "../types";
 
 interface Props {
@@ -84,8 +85,8 @@ function About({ aboutObject }: Props) {
           </p>
 
           <p>
-            Check out my architecture <a href="Portfolio">portfolio</a> +
-            <a href="Gallery">artwork</a>!
+            Check out my architecture <Link to="/Portfolio">portfolio</Link> +{" "}
+            <Link to="/Gallery">artwork!</Link>
           </p>
         </div>
 
